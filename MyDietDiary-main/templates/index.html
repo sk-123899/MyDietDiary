@@ -1,0 +1,155 @@
+{% extends 'basic.html' %}
+{% block body %}
+    <!-- nav end -->
+    {%load static%}
+    <section class="banner1" style=" position: relative;
+    width: 100%;
+    height: 105vh;
+    background-image: url({% static 'images/homebanner.png' %});
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0 0 200px;">
+        <div style="animation: fadein1 2s;">
+            <h1 class="fitness">
+                Make your Diet Plan Here.
+            </h1>
+            <h4 class="my-3" style="font-weight: bold;">
+                Step 1 : <span style="font-weight: normal;">Enter all the necessary fields <br> <a href="bodymass">(if you dont know your body fat percentage then <br> go to body fat percentage calculator page).</a> </span> 
+            </h4>
+            <h4 class="my-3" style="font-weight: bold;">
+                Step 2 : <span style="font-weight: normal;">Select what you want to eat from given field <br> in Breakfast , Lunch .Dinner and then press update button.</span> 
+            </h4>
+            <h4 class="my-3" style="font-weight: bold;">
+                Step 3 : <span style="font-weight: normal;">Calorie Calculator will tell you about how much <br> calories you need to eat , if your calorie doent match <br> with requirement then add or remove food according <br> to your condition.</span> 
+            </h4>
+        </div>
+        
+        
+    </section>
+    <form onsubmit="/diet" method="POST">
+        {% csrf_token %}
+        <section class="p-4">
+            <div class="card">
+                <div class="card-header bg-warning">
+                    <h4 class="m-0">Info</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <label for="exampleFormControlInput1" class="form-label">Age</label>
+                            <input type="number" class="form-control" name="age" id="exampleFormControlInput1"
+                                placeholder="eg. 22,20 etc">
+                        </div>
+                        <!-- <div class="col-md-6 mb-4">
+                            <label for="exampleFormControlInput1" class="form-label">Vegetarian / Non-Vegetarian</label>
+                            <div class="col-md-4">
+                                <input type="radio" name="veg/nonveg" value="0">Veg</input>
+                            </div>
+    
+                            <div class="col-md-4">
+                                <input type="radio" name="veg/nonveg" value="1">Non-Veg</input>
+                            </div>
+                        </div> -->
+                        <div class="col-md-6 mb-4">
+                            <label for="exampleFormControlInput1" class="form-label">Weight</label>
+                            <input type="number" class="form-control" name="weight" id="exampleFormControlInput1"
+                                placeholder="Enter your weight here (Kg)">
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <label for="exampleFormControlInput1" class="form-label">Height</label>
+                            <input type="number" class="form-control" name="height" id="exampleFormControlInput1"
+                                placeholder="Enter your height here (cm)">
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <label for="exampleFormControlInput1" class="form-label">Body fat in percentage</label>
+                            <input type="number" class="form-control" name="bodyfat" id="exampleFormControlInput1"
+                                placeholder="Body fat in percentage" step="any">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="row threebuttons card" >
+                                <div class="card-header bg-warning">
+                                    What do you want to do?
+                                </div>
+                                <div class="card-body">
+                                    <div class="col-md-12">
+                                        <input type="radio" name="goal" value="weight loss">Weight Loss</input>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="radio" name="goal" value="healthy" checked>Healthy</input>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="radio" name="goal" value="weight gain">Weight Gain</input>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row threebuttons card">
+                                <div class="card-header bg-warning">
+                                    How much is your daily activity?
+                                </div>
+                                <div class="card-body">
+                                    <div class="col-md-12">
+                                        <input type="radio" name="activity" value="1.3">Very Light</input>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="radio" name="activity" value="1.55">Light</input>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="radio" name="activity" value="1.65">Moderate</input>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="radio" name="activity" value="1.8" checked>Heavy</input>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="radio" name="activity" value="2">Very Heavy</input>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row threebuttons card">
+                                <div class="card-header bg-warning">
+                                    Define your Gender.
+                                </div>
+                                <div class="card-body">
+                                    <div class="col-md-12">
+                                        <input type="radio" name="gender" value="m">Male</input>
+                                    </div>
+            
+                                    <div class="col-md-12">
+                                        <input type="radio" name="gender" value="f">Female</input>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div style="display: flex; justify-content: center; padding-bottom: 23px;">
+                    <input type="submit" value="Recommend" name="b1" class="btn btn-warning" style="color: black;">
+                </div>
+            </div>
+    </form>
+    </section>
+
+
+    <!-- Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
+
+
+{% endblock %}

@@ -1,0 +1,167 @@
+{% extends 'basic.html' %}
+{% block body %}
+    {%load static%}
+    <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div style="position: absolute; padding: 200px 0 0 180px; animation: fadein1 2s;">
+                <div>
+                    <h1 class="fitness">
+                        "Fitness starts <br> with what you eat. <br>
+                        Take control of your goals. <br> Track calories, break down <br> ingredients,  and log activities <br> with our Diet Planner."
+                    </h1>
+                    
+                    
+                </div> 
+            </div>
+            <img src="{% static 'images/homebanner.png' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <div style="position: absolute; padding: 300px 0 0 600px; animation: fadein1 2s;">
+                <div>
+                    
+                    <h1 style="font-size: 2.9rem; font-weight: bold;">
+                        "It took more than a day to put it on. <br> It will take more than a day to take it off."
+                    </h1>
+                </div> 
+            </div>
+            <img src="{% static 'images/Diet-Plan-1.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/1552678.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    <!-- <section class="banner1" style=" position: relative;
+    width: 100%;
+    height: 105vh;
+    background-image: url({% static 'images/homebanner.png' %});
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0 0 200px;">
+        <div style="animation: fadein1 2s;">
+            <h1 class="fitness">
+                Fitness starts <br> with what you eat.
+            </h1>
+            <h4>
+                Take control of your goals. <br> Track calories, break down ingredients, <br> and log activities with our Diet Planner.
+            </h4>
+        </div>
+         -->
+    </section>
+    <section class="banner2" style="
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 650px 0 50px;
+    display: flex;
+    flex-direction: column;
+    height: 65vh;
+    background-image: url({% static 'images/33.png' %}) ;">
+        <h4 class="mt-4">
+            Introduction
+        </h4>
+        <p>
+            In Todays modern world people all around the globe are becoming more interested in thier health and lifestyle. But just avoiding junk food and doing a exercise is not enough , we require a balanced diet .A balanced diet based on our height , weight and age can lead a healthy life. Combined with physical activity, your diet can help you to reach and maintain a 
+            healthy weight, reduce your risk of chronic diseases (like heart disease and cancer), 
+            and promote your overall health. A balanced diet is one that gives your body the 
+            nutrients it needs to function correctly. Calories in the food is the measure of amount of energy store in that food . Our body use calories for basically everything like breathing , walking , running etc. On average a person need  2000 calories per day but specifically intake of calories depend upon persons physical aspects like weight , height , age and gender .
+            So Your food choices each day affect your health — how you feel today, tomorrow, 
+            and in the future. Thus a proposed system gives recommend you a diet plan based on your physical aspects and your end goal .        
+        </p>
+    </section>
+    <section >
+        <div class="mt-3 mb-5" style="text-align: center; ">
+            <h2 style="font-weight: bold;">The Tools for Your Goals</h2>
+        </div>
+        <div style="margin: 0 400px; ">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static 'images/bodymass.jpg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Body Fat% Calculator</h5>
+                          <p class="card-text">
+                                The Body Fat Percentage Calculator can be used to estimate your total body fat 
+                                based on specific measurements.                           
+                            </p>
+                          <hr class="m-0">
+                          <p class="card-text">
+                                Enter your height, weight, Gender and Age using standard measures.
+                          </p>
+                          <a href="/bodymass" class="btn btn-warning">Calculator</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static 'images/planner.jpg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">What to eat??</h5>
+                          <p class="card-text">Eat This Much creates personalized meal plans based on your food preferences, budget, and schedule. Reach your diet and nutritional goals with our calorie calculator, weekly meal plans, grocery lists and more. </p>
+                          <a href="/dietplanner" class="btn btn-warning">Planner</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- <section>
+        <div class="mt-3 mb-2" style="text-align: center; ">
+            <h2 style="font-weight: bold;">Our Team</h2>
+        </div>
+        <div class="wrap">
+        
+            <div class="row row2">
+                <div class="col-md-4 col-sm-4 wrap2" >
+                    <div class="outercircle" style="background-image: url({% static 'images/shubham.jpg' %});  background-size: 100px 100px;">
+                        <div class="innercircle"><a target="_blank"  href="https://www.linkedin.com/in/shubham-kardam/"><i class="fab fa-linkedin-in"></i></a></div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 col-sm-4 wrap2" >
+                    <div class="outercircle" style="background-image: url({% static 'images/poonam.jpeg' %});  background-size: 100px 100px;">
+                        <div class="innercircle"><a target="_blank" href="https://www.linkedin.com/in/pinky-yadav-586617188/"><i class="fab fa-linkedin-in"></i></a></div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 col-sm-4 wrap2" >
+                    <div class="outercircle" style="background-image: url({% static 'images/raj.jpeg' %});  background-size: 100px 100px;">
+                        <div class="innercircle"><a target="_blank" href="https://www.linkedin.com/in/raj-thakkar-665377193/"><i class="fab fa-linkedin-in"></i></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    
+  
+
+
+
+    
+
+
+
+    <!-- Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })
+    </script>
+    
+
+
+
+{%endblock%}
