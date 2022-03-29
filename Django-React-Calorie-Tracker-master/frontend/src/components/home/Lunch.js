@@ -19,7 +19,7 @@ class Lunch extends React.Component {
     render(){
         return (
             <>
-                <h4 className="text-success">Lunch</h4>
+                <h4 className="text-warning">Lunch</h4>
                 <FoodTable 
                     foodList = {this.props.lunchList}
                     category="L"

@@ -11,14 +11,17 @@
             {% load static %}
     
             <link rel="stylesheet" type="text/css" href="{% static 'css/diet.css' %}">
+            <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}"/>    
             <title>Diet Plan</title>
     </head>
     <body>
     <header>
         <a href="/" class="logo">MYDIETDIARY</a>
         <ul class="m-0">
-            <li></li>
-            <li>
+            <li><a href="/" class="btn btn-warning">Home</a></li>
+            <li><a href="http://localhost:3000" class="btn btn-warning">Dashboard</a></li>
+            <ul style="text-align:centre; width: 380px; height: 50px; border: 2px solid #FFC107; box-sizing: border-box;">
+            <li >
             <h6 class="m-0" style="">
                 Total Calories: <span id="caloriesadded"></span> / <span id="caloriesreq"
                     value={{caloriesreq}}>{{caloriesreq}}</span> goal
@@ -27,7 +30,8 @@
             <li>
             <button onclick="getValue()" class="btn btn-warning" style="margin-left: 20%;">Update</button>
             </li>
-            </ul>
+        </ul>
+    </ul>
      </header>
 
 

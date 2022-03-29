@@ -4,7 +4,14 @@ import {login} from '../../actions/auth'
 import {Redirect} from 'react-router-dom'
 import {Form,Col,Row,Button,Card} from 'react-bootstrap'
 
+import hcbgImage from "./homebanner.png"; 
 
+// const styles = StyleSheet.create({
+//     userpass: {
+//       color: 'black',
+//       width:'40rem'
+//     }
+//   });
 
 const Login = (props) => {
     const [username,setUsername] = useState("")
@@ -19,10 +26,11 @@ const Login = (props) => {
         setPassword("")
         return <Redirect to="/" />
     }
-    
+
+
     const returnForm = () =>{
         return (
-            <Card style={{width:'40rem'}}>
+            <Card style={{color: 'black' , backgroundColor: '#FFC107' ,position: 'absolute', width:'40rem', marginLeft:'40px', padding:'10px',marginTop:'150px'}}>
                 <Card.Body>
                     <Form onSubmit={loginUser}>
                         <Form.Group as={Row} controlId="username">
@@ -48,7 +56,7 @@ const Login = (props) => {
                             </Col>
                         </Form.Group>
 
-                        <Button variant="primary" type="submit">
+                        <Button variant="primary" type="submit" style={{marginLeft:'250px'}}>
                             Login
                         </Button>            
                     </Form>
@@ -59,7 +67,9 @@ const Login = (props) => {
 
     return (
     <>
+    <div class="bg_image" style={{ backgroundImage: `url(${hcbgImage})`, backgroundSize: "cover", height: "100vh", color: "#f5f5f5" }} > 
     {auth.isAuthenticated ? <Redirect to="/" /> : returnForm() }
+    </div>
     </>)
 }
 

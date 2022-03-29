@@ -3,7 +3,7 @@ import {useDispatch,useSelector} from 'react-redux'
 import {register} from '../../actions/auth'
 import {Redirect} from 'react-router-dom'
 import {Form,Col,Row,Button,Card} from 'react-bootstrap'
-
+import hcbgImage from "./homebanner.png"; 
 
 const Register = () => {
     const [username,setUsername] = useState("")
@@ -26,7 +26,7 @@ const Register = () => {
     }
     const renderForm = () => {
         return (
-            <Card style={{width:'40rem'}}>
+            <Card style={{color: 'black' , backgroundColor: '#FFC107' ,position: 'absolute', width:'40rem', marginLeft:'40px', padding:'10px',marginTop:'150px'}}>
                 <Card.Body>
                     <Form onSubmit={createUser}>
                         <Form.Group as={Row} controlId="username">
@@ -67,7 +67,7 @@ const Register = () => {
                             onChange={(e) => setPassword2(e.target.value)}/>
                             </Col>
                         </Form.Group>
-                        <Button variant="primary" type="submit">
+                        <Button variant="primary" type="submit" style={{marginLeft:'230px'}}>
                             Create Account
                         </Button>            
                     </Form>
@@ -76,8 +76,11 @@ const Register = () => {
         )
     }
 
-    return (<> {auth.isAuthenticated ? <Redirect to="/" /> :renderForm()}</>
-        
+    return (<>
+    <div class="bg_image" style={{ backgroundImage: `url(${hcbgImage})`, backgroundSize: "cover", height: "100vh", color: "#f5f5f5" }} > 
+    {auth.isAuthenticated ? <Redirect to="/" /> :renderForm()}
+    </div>    
+    </>
     )
 }
 

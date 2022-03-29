@@ -14,8 +14,8 @@ class Home extends React.Component {
 
     state = {
         hideStatistics:true,
-        statsButtonColor:'outline-success',
-        foodLogButtonColor:'success'
+        statsButtonColor:'outline-warning',
+        foodLogButtonColor:'warning'
     }
 
     componentDidMount(){
@@ -23,11 +23,11 @@ class Home extends React.Component {
     }
 
     onClickShowStats = () => {
-        this.setState({hideStatistics:false,statsButtonColor:'success',foodLogButtonColor:'outline-success'})
+        this.setState({hideStatistics:false,statsButtonColor:'warning',foodLogButtonColor:'outline-warning'})
     }
 
     onClickShowFoodLog = () => {
-        this.setState({hideStatistics:true,statsButtonColor:'outline-success',foodLogButtonColor:'success'})
+        this.setState({hideStatistics:true,statsButtonColor:'outline-warning',foodLogButtonColor:'warning'})
     }
 
     render(){
@@ -38,7 +38,7 @@ class Home extends React.Component {
                     <Container fluid className="mt-3">
 
                         <Row className="justify-content-center">
-                            <Button variant={this.state.foodLogButtonColor} className="mr-3" onClick={this.onClickShowFoodLog}>
+                            <Button variant={this.state.foodLogButtonColor} className="mr-3" onClick={this.onClickShowFoodLog} >
                                 Daily Food Log
                             </Button>
 

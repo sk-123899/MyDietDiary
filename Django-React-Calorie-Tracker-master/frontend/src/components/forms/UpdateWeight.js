@@ -26,7 +26,7 @@ const UpdateWeightForm = () =>{
                             onChange = {(e)=>setUpdatedWeight(e.target.value)}
                             />
                     </Form.Group>
-                    <Button type="submit" variant="success" size="sm">Update Weight</Button>
+                    <Button type="submit" variant="warning" size="sm">Update Weight</Button>
                 </Form>
             </Card>
         </>

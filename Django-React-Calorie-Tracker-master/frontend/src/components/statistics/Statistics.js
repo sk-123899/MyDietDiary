@@ -36,7 +36,7 @@ function convertToWeightDataSet(arr){
         labels: xLabel,
         datasets: [
             {
-            label: 'Weight (lbs)',
+            label: 'Weight (Kg)',
             fill: false,
             lineTension: 0.5,
             backgroundColor: 'rgba(75,192,192,1)',

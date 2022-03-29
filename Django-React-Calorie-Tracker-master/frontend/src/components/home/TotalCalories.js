@@ -39,7 +39,7 @@ const TotalCalories = () => {
             <Container fluid className="mt-3">
                 <Row>
                     <Col xs={12} md={{span:6,offset:2}}>
-                        <Card body className="border-0">
+                        <Card body className="border-0" style={{marginTop:'40px'}}>
                             <Row>   
                                 <Doughnut 
                                     data={dataSet}
@@ -66,7 +66,7 @@ const TotalCalories = () => {
                     </Col>
 
                     <Col xs={12} md={{span:2,offset:1}}>
-                        <Card body className="text-center">
+                        <Card body className="text-center" style={{marginTop:'40px', backgroundColor:'#FFC107'}}>
                             <h4>Daily Total Calories</h4>
                             <h6>{total.total ? total.total:0}</h6>   
                             <hr style={{width:"4rem"}} />

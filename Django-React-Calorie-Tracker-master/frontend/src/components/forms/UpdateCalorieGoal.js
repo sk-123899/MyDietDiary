@@ -29,7 +29,7 @@ const UpdateWeightForm = () =>{
                             />
                             
                     </Form.Group>
-                    <Button type="submit" variant="success" size="sm">Update Calorie Goal</Button>
+                    <Button type="submit" variant="warning" size="sm">Update Calorie Goal</Button>
                 </Form>
             </Card>
         </>

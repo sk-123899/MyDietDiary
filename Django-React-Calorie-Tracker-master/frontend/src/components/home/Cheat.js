@@ -19,7 +19,7 @@ class Cheat extends React.Component {
     render(){ 
         return (
             <>
-                <h4 className="text-success">Cheat</h4>
+                <h4 className="text-warning">Cheat</h4>
                 <FoodTable 
                     foodList = {this.props.cheatList}
                     category="C"

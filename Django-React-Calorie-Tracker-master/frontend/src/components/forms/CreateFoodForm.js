@@ -60,7 +60,7 @@ const CreateFoodForm = (props) => {
                     </td>
 
                     <td  style={{width:"6rem"}}>
-                        <Button style={{width:"5rem"}} variant="success" type="submit" size="sm" onClick={submitFood}>
+                        <Button style={{width:"5rem"}} variant="warning" type="submit" size="sm" onClick={submitFood}>
                             Add Food
                         </Button>    
                     </td>
