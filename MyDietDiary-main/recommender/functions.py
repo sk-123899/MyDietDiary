@@ -17,6 +17,7 @@ from foodrec.settings import BASE_DIR
 
 
 data=pd.read_csv(os.path.join(BASE_DIR ,"static/data/food.csv"))
+print(data.info())
 Breakfastdata=data['Breakfast']
 BreakfastdataNumpy=Breakfastdata.to_numpy()
                                    
@@ -26,7 +27,8 @@ LunchdataNumpy=Lunchdata.to_numpy()
 Dinnerdata=data['Dinner']
 DinnerdataNumpy=Dinnerdata.to_numpy()
 Food_itemsdata=data['Food_items']
-
+print("i"*40)
+print("lennnn",len(Food_itemsdata))
 
 def Weight_Loss(age,weight,height):
     breakfastfoodseparated=[]
@@ -682,10 +684,18 @@ def Healthy(age,weight,height):
     
     returndata=[]
     for ii in range(len(y_pred)):
-        print(y_pred)
+        print("y_pred",y_pred)
         if y_pred[ii]==1:
-            returndata.append(Food_itemsdata[ii])
-            findata=Food_itemsdata[ii]
+            print("()"*30)
+            print(len(Food_itemsdata))
+            if ii >= 91:
+                returndata.append(Food_itemsdata[ii - (ii - 90)])
+                findata=Food_itemsdata[ii - (ii - 90)]
+            else:                
+                returndata.append(Food_itemsdata[ii])
+                findata=Food_itemsdata[ii ]
+
+
             # if int(veg)==1:
                 # datanv=['Chicken Burger']
 
