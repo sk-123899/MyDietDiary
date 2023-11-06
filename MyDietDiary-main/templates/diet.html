@@ -38,9 +38,10 @@
      <div class="banner1">
         <div class="row">
             {% if bmi %}
-            <h1 style="">Your BMI is {{bmi}}</h1>
+            <h1 style="text-align: left">Your BMI is {{bmi}}</h1>
             {% endif %}
-            <h1 style="">{{bmiinfo}}</h1>
+            <h1 style="text-align: left">{{bmiinfo}}</h1>
+            <p style="">{{ openaires | safe }}</p>
         </div>
       </div>     
 

@@ -307,19 +307,19 @@ def Weight_Gain(age,weight,height):
     #conditions
 
     if ( bmi < 16):
-        bmiinfo="according to your BMI, you are Severely Underweight"
+        bmiinfo="According to your BMI, you are Severely Underweight"
         clbmi=4
     elif ( bmi >= 16 and bmi < 18.5):
-        bmiinfo="according to your BMI, you are Underweight"
+        bmiinfo="According to your BMI, you are Underweight"
         clbmi=3
     elif ( bmi >= 18.5 and bmi < 25):
-        bmiinfo="according to your BMI, you are Healthy"
+        bmiinfo="According to your BMI, you are Healthy"
         clbmi=2
     elif ( bmi >= 25 and bmi < 30):
-        bmiinfo="according to your BMI, you are Overweight"
+        bmiinfo="According to your BMI, you are Overweight"
         clbmi=1
     elif ( bmi >=30):
-        bmiinfo="according to your BMI, you are Severely Overweight"
+        bmiinfo="According to your BMI, you are Severely Overweight"
         clbmi=0
 
 
@@ -544,19 +544,19 @@ def Healthy(age,weight,height):
     #conditions
     print("Your body mass index is: ", bmi)
     if ( bmi < 16):
-        bmiinfo="according to your BMI, you are Severely Underweight"
+        bmiinfo="According to your BMI, you are Severely Underweight"
         clbmi=4
     elif ( bmi >= 16 and bmi < 18.5):
-        bmiinfo="according to your BMI, you are Underweight"
+        bmiinfo="According to your BMI, you are Underweight"
         clbmi=3
     elif ( bmi >= 18.5 and bmi < 25):
-        bmiinfo="according to your BMI, you are Healthy"
+        bmiinfo="According to your BMI, you are Healthy"
         clbmi=2
     elif ( bmi >= 25 and bmi < 30):
-        bmiinfo="according to your BMI, you are Overweight"
+        bmiinfo="According to your BMI, you are Overweight"
         clbmi=1
     elif ( bmi >=30):
-        bmiinfo="according to your BMI, you are Severely Overweight"
+        bmiinfo="According to your BMI, you are Severely Overweight"
         clbmi=0
 
     
